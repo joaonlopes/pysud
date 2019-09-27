@@ -1,0 +1,27 @@
+## python specific
+__pycache__
+*.pyc
+
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+*.bak
+
+## user created files to ignore
+*.db
+*.dat
+*.dir
+*.~ml
+*.data
+*.sublime-project
+*.sublime-workspace
+*.geanyprj
+build.sh
+
+## directories to ignore
+doc/
+dist/
+res/

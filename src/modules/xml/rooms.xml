@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<rooms>
+
+<room name="Inicio" id="1">	
+	<description>Te encuentras a las puertas de una antigua torre abandonada, ante ella descansan los restos de lo que pareciera fué un guardia del lugar. Hacia el sur se halla el desierto helado por el que llegaste, lejos hacia el este puedes ver un conjunto de árboles.</description>
+	<transitions>
+		<transition destination="2">
+		<command>este</command>
+		<command>e</command>
+		<command>arboles</command>
+		</transition>
+		<transition destination="3">
+		<command>torreon</command>
+		<command>torre</command>
+		<command>norte</command>
+		</transition>
+	</transitions>
+</room>
+
+<room name="Bosque" id="2">
+	<description>Tras caminar un buen trecho llegas a lo que deduces es la entrada a un bosque más denso, tan distinto del paisaje desértico que llevas viendo durante días. Las copas de los árboles están cubiertas de nieve, aunque no nieva en este preciso momento. Te llama la atención un gran montículo de tierra que resalta entre los árboles, sobre el mismo han dispuesto algunos tótems orcos, como señalando algo, y un gran jarro de arcilla. Hacia el oeste se encuentra el camino al torreón.</description>
+	<transitions>
+		<transition destination="1">
+		<command>oeste</command>
+		<command>o</command>
+		</transition>
+	</transitions>
+</room>
+
+<room name="Torre - Primer Piso" id="3">
+	<description>Esta estructura de piedra y madera está en muy mal estado, claramente abandonada hace tiempo. Las puertas principales han sido vencidas (te imaginas en un asedio) y hay unos cuantos cuerpos de orcos (algunos desmembrados) y esqueletos por todo el lugar. Cerca de la entrada ves lo que fuera un puesto de guardia, y más lejos una escalera sobre el muro norte lleva al segundo piso.</description>
+	<transitions>
+		<transition destination="1">
+		<command>s</command>
+		<command>sur</command>
+		<command>salir torre</command>
+		</transition>
+		<transition destination="4">
+		<command>puesto de guardia</command>
+		<command>puesto</command>
+		<command>guardia</command>
+		<command>ir a puesto</command>
+		</transition>
+		<transition destination="5">
+		<command>subir</command>
+		<command>subir escalera</command>
+		<command>escalera</command>
+		</transition>
+	</transitions>
+</room>
+
+<room name="Puesto de Guardia Orco" id="4">
+	<description>Aquí yace un orco con su cráneo atravesado por una lanza, cerca de una rústica silla de madera. Tras estos ves un estante de armas. La única salida aparente es por la que llegaste, que lleva al salón principal de la torre.</description>
+	<transitions>
+		<transition destination="3">
+			<command>torre</command>
+			<command>salon principal</command>
+			<command>salir puesto</command>
+		</transition>
+	</transitions>
+</room>
+
+<room name="Torre - Segundo Piso" id="5">
+	<description>Subes la escalera con cuidado y al llegar al segundo piso ves una especie de barricada improvisada con mesas, sillas y camas. La misma está rodeada por los restos de orcos y no muertos que pelearon hasta el fín. La escalera sigue ascendiendo un piso más.</description>
+	<transitions>
+		<transition destination="3">
+			<command>bajar</command>
+			<command>salon principal</command>
+			<command>bajar escalera</command>
+		</transition>
+	</transitions>
+</room>
+
+<room name="Torre - Tercer Piso" id="6">
+	<description>Esquivas algunos cuerpos mientras subes la escalera hacia el tercer piso, donde los signos de batalla no son tan obvios como en los pisos inferiores. Aquí está el puesto del vigía con un brasero en el centro y enormes ventanas sobre cada uno de los cuatro muros. Este es el último piso y no puedes subir más. Observas el inquitante bosque helado que se alza al norte y al este, el silencio es tan grande que no puedes evitar sentir algo de pánico: no logras distinguir siquiera un ave revolotear por las copas de aquellos árboles nevados.</description>
+</room>
+
+</rooms>

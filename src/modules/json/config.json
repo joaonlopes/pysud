@@ -1,0 +1,7 @@
+{
+  "config": {
+    "ENABLE_JOURNAL": true,
+    "ENABLE_SAVEGAME": true,
+    "PLAYER_DEFAULT_NAME": "Player 1"
+  }
+}
