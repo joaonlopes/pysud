@@ -8,6 +8,7 @@ Contains basic classes such as the game, player character, levels(rooms)...
 import pysud_events as ev
 import pysud_str
 from functools import reduce
+import pyttsx3
 
 class GameEntity():
     """ Inner use abstract class. """
@@ -15,7 +16,7 @@ class GameEntity():
     def __init__(self):
         self.name = None
         self.uid = None
-        self.description = None
+        self.description = None       
 
     def __str__(self):
         return str(self.uid + ' : ' + self.name)
@@ -413,6 +414,7 @@ class IOManager():
         self.last_user_input = ''
         self.__game = game
         self.msg_dict = pysud_str.MSG_DICT
+        self.engine = pyttsx3.init('espeak')
 
     def show_player_stats(self):
         """ Prints the player game's exploration's progress. """
@@ -498,6 +500,9 @@ class IOManager():
     def show_message(self, string):
         """ Prints a given string to std out. """
         print(string)
+        self.engine.say(string)
+        self.engine.runAndWait()
+        
 
     def show_message_list(self, strings):
         """ Concatenates collection items with spaces prior to printing out. """
